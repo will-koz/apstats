@@ -1,0 +1,6 @@
+# Final executable:
+apstats
+
+# Intermediate binaries:
+*.hi
+*.o
