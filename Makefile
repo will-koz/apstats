@@ -8,4 +8,4 @@ exec:
 
 clean:
 	rm -rf *.o *.hi $(LIB_NAME)/*.o $(LIB_NAME)/*.hi
-	rm -rf
+	rm -rf $(OUTPUT)
