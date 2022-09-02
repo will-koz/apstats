@@ -27,3 +27,5 @@ median xs
 
 mode :: Ord a => [a] -> a
 mode x = fst $ head  $ sortBy appearencesTable_Ordering (appearencesTable x)
+
+-- ntile :: [a] -> Int -> Maybe [a]
