@@ -30,4 +30,6 @@ mode x = fst $ head  $ sortBy appearencesTable_Ordering (appearencesTable x)
 
 -- ntile :: Int -> [a] -> Maybe [a]
 -- percentile :: [a] -> Maybe [a]
+-- percentile = ntile 100 -- I don't expect this to be used very often
 -- quartile :: [a] -> Maybe [a]
+-- quartile = ntile 4
