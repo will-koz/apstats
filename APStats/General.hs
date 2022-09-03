@@ -33,7 +33,8 @@ ntile x ys = take x sys
     where
         sys = sort ys
 
--- percentile :: [a] -> Maybe [a]
--- percentile = ntile 100 -- I don't expect this to be used very often
--- quartile :: [a] -> Maybe [a]
--- quartile = ntile 4
+percentile :: [a] -> Maybe [a]
+percentile = ntile 100 -- I don't expect this to be used very often
+
+quartile :: [a] -> Maybe [a]
+quartile = ntile 4
