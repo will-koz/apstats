@@ -2,6 +2,10 @@ module APStats.General where
 
 import Data.List
 
+-- generally useful utility for dividing two integers
+(//) :: Int -> Int -> Float
+(//) x y = (fromIntegral x) / (fromIntegral y)
+
 appearencesTable :: Ord a => [a] -> [(a, Int)]
 appearencesTable = ((map (\full@(first:_) -> (first, length full))) . group) . sort
 
@@ -14,8 +18,11 @@ appearencesTable_Ordering (_, a) (_, b)
 mean :: (Fractional a, Foldable t) => t a -> a
 mean x = (sum x) / (fromIntegral (length x))
 
-mean_list :: [[a]] -> Int
-mean_list x = mean (map length x)
+mean_int :: (Foldable t) => t Int -> Float
+mean_int x = (sum x) // (length x)
+
+mean_length :: [[a]] -> Float
+mean_length x = mean_int (map length x)
 
 median :: (Ord a, Fractional a) => [a] -> a
 median xs

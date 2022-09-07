@@ -10,4 +10,4 @@ small_list = [3, 3, 2, 1, 1, 1, 77]
 word_list = ["Hi", "my", "name", "is", "Hal"]
 
 main :: IO ()
-main = print (mean_list word_list)
+main = print (mean_length word_list)
