@@ -42,9 +42,9 @@ ntile :: (Ord a) => Int -> [a] -> Maybe [a]
 ntile x ys = Just (take x sys)
     where
         sys = sort ys
---
--- percentile :: [a] -> Maybe [a]
--- percentile = ntile 100 -- I don't expect this to be used very often
---
+
+percentile :: [a] -> Maybe [a]
+percentile = ntile 100 -- I don't expect this to be used very often
+
 -- quartile :: [a] -> Maybe [a]
 -- quartile = ntile 4
