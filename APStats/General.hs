@@ -44,7 +44,7 @@ ntile x ys = Just (take x sys)
         sys = sort ys
 
 percentile :: Ord a => [a] -> Maybe [a]
-percentile x = ntile 100 x -- I do expect this to be used very often
+percentile x = ntile 100 x -- I do not expect this to be used very often
 
 quartile :: Ord a => [a] -> Maybe [a]
 quartile x = ntile 4 x
