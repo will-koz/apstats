@@ -15,6 +15,10 @@ appearencesTable_Ordering (_, a) (_, b)
     | a > b = LT
     | otherwise = EQ
 
+-- Gives the distance, squared, between two numbers
+distance :: Num a => a -> a -> a
+distance x y = (x - y) ^ 2
+
 mean :: (Fractional a, Foldable t) => t a -> a
 mean x = (sum x) / (fromIntegral (length x))
 
@@ -48,3 +52,22 @@ mode x = fst $ head  $ sortBy appearencesTable_Ordering (appearencesTable x)
 --
 -- quartile :: Ord a => [a] -> Maybe [a]
 -- quartile x = ntile 4 x
+
+standard_deviation :: Floating a => [a] -> a
+standard_deviation xs = standard_deviation_pop xs
+
+standard_deviation_general :: Floating a => [a] -> a -> a
+standard_deviation_general xs y = sqrt (sum (map (distance m) xs) / y)
+    where
+        m = mean xs
+
+standard_deviation_pop :: Floating a => [a] -> a
+standard_deviation_pop xs = standard_deviation_general xs count
+    where
+        count = fromIntegral (length xs)
+
+standard_deviation_sample :: Floating a => [a] -> a
+standard_deviation_sample xs = standard_deviation_general xs denom
+    where
+        count = 1 + (length xs)
+        denom = fromIntegral count
