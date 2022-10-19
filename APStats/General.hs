@@ -38,13 +38,13 @@ median xs
 mode :: Ord a => [a] -> a
 mode x = fst $ head  $ sortBy appearencesTable_Ordering (appearencesTable x)
 
-ntile :: Ord a => Int -> [a] -> Maybe [a]
-ntile x ys = Just (take x sys)
-    where
-        sys = sort ys
-
-percentile :: Ord a => [a] -> Maybe [a]
-percentile x = ntile 100 x -- I don't expect this to be used very often
-
-quartile :: Ord a => [a] -> Maybe [a]
-quartile x = ntile 4 x
+-- ntile :: Ord a => Int -> [a] -> Maybe [a]
+-- ntile x ys = Just (take x sys)
+--     where
+--         sys = sort ys
+--
+-- percentile :: Ord a => [a] -> Maybe [a]
+-- percentile x = ntile 100 x -- I don't expect this to be used very often
+--
+-- quartile :: Ord a => [a] -> Maybe [a]
+-- quartile x = ntile 4 x
