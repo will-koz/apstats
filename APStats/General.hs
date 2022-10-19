@@ -49,7 +49,9 @@ mode x = fst $ head  $ sortBy appearencesTable_Ordering (appearencesTable x)
 --
 -- percentile :: Ord a => [a] -> Maybe [a]
 -- percentile x = ntile 100 x -- I don't expect this to be used very often
---
+
+quadratic_mean xs = sqrt ((sum (map (^2) xs)) / (fromIntegral (length xs)))
+
 -- quartile :: Ord a => [a] -> Maybe [a]
 -- quartile x = ntile 4 x
 
