@@ -72,6 +72,7 @@ standard_deviation_sample xs = standard_deviation_general xs denom
         count = (length xs) - 1
         denom = fromIntegral count
 
+variance :: Fractional a => [a] -> a -> a
 variance xs y = sum (map (distance m) xs) / y
     where
         m = mean xs
