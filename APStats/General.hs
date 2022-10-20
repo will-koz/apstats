@@ -59,9 +59,7 @@ standard_deviation :: Floating a => [a] -> a
 standard_deviation xs = standard_deviation_pop xs
 
 standard_deviation_general :: Floating a => [a] -> a -> a
-standard_deviation_general xs y = sqrt (sum (map (distance m) xs) / y)
-    where
-        m = mean xs
+standard_deviation_general xs y = sqrt (variance xs y)
 
 standard_deviation_pop :: Floating a => [a] -> a
 standard_deviation_pop xs = standard_deviation_general xs count
@@ -73,3 +71,7 @@ standard_deviation_sample xs = standard_deviation_general xs denom
     where
         count = (length xs) - 1
         denom = fromIntegral count
+
+variance xs y = sum (map (distance m) xs) / y
+    where
+        m = mean xs
