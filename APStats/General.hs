@@ -71,5 +71,5 @@ standard_deviation_pop xs = standard_deviation_general xs count
 standard_deviation_sample :: Floating a => [a] -> a
 standard_deviation_sample xs = standard_deviation_general xs denom
     where
-        count = 1 + (length xs)
+        count = (length xs) - 1
         denom = fromIntegral count
