@@ -6,6 +6,7 @@ import Data.List
 (//) :: Int -> Int -> Float
 (//) x y = (fromIntegral x) / (fromIntegral y)
 
+-- gives back a list of tuples of the items in a list and their counts
 appearencesTable :: Ord a => [a] -> [(a, Int)]
 appearencesTable = ((map (\full@(first:_) -> (first, length full))) . group) . sort
 
