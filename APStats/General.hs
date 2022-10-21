@@ -20,12 +20,15 @@ appearencesTable_Ordering (_, a) (_, b)
 distance :: Num a => a -> a -> a
 distance x y = (x - y) ^ 2
 
+-- regular arithmetic mean for non-integers
 mean :: (Fractional a, Foldable t) => t a -> a
 mean x = (sum x) / (fromIntegral (length x))
 
+-- regular arithmetic mean for integers
 mean_int :: (Foldable t) => t Int -> Float
 mean_int x = (sum x) // (length x)
 
+-- arithmetic mean of the lengths of items in a list (requires 2D list)
 mean_length :: [[a]] -> Float
 mean_length x = mean_int (map length x)
 
