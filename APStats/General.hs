@@ -43,6 +43,7 @@ median xs
         mid = len `div` 2
         sortedList = sort xs
 
+-- returns the most common item in a list
 mode :: Ord a => [a] -> a
 mode x = fst $ head  $ sortBy appearencesTable_Ordering (appearencesTable x)
 
