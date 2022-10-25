@@ -7,6 +7,8 @@ content.
 
 ## TODO
 
+- [ ] Figure out how quartiles and other ntiles should be implemented
+
 ## License
 
 This code is licensed under the MIT License.
