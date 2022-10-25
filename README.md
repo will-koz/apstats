@@ -8,6 +8,9 @@ content.
 ## TODO
 
 - [ ] Figure out how quartiles and other ntiles should be implemented
+  - [ ] Add interquartile range
+  - [ ] Use interquartile range to find outliers (1.5IQR) and extreme outliers (3IQR)
+  - [ ] Generate a trimmed mean and equivalent of an "extreme" trimmed mean
 
 ## License
 
