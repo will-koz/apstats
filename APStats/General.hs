@@ -62,6 +62,7 @@ quadratic_mean xs = sqrt ((sum (map (^2) xs)) / (fromIntegral (length xs)))
 -- quartile :: Ord a => [a] -> Maybe [a]
 -- quartile x = ntile 4 x
 
+-- alias for standard_deviation_pop
 standard_deviation :: Floating a => [a] -> a
 standard_deviation xs = standard_deviation_pop xs
 
