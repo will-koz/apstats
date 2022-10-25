@@ -32,6 +32,8 @@ mean_int x = (sum x) // (length x)
 mean_length :: [[a]] -> Float
 mean_length x = mean_int (map length x)
 
+-- for an even length list, this is the average of the middle two values. Otherwise, it is the
+-- middle value
 median :: (Ord a, Fractional a) => [a] -> a
 median xs
     | null xs = 0
