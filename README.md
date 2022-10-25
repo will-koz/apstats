@@ -5,6 +5,8 @@ functions covered in the course can be expressed in Haskell code, so as I go thr
 the following year, I plan to write the relevant functions to gain a better understanding of the
 content.
 
+## TODO
+
 ## License
 
 This code is licensed under the MIT License.
